@@ -46,7 +46,7 @@ function bubbleSort(arr) {
 			}
 		}
 	}
-	console.log("Array was sorted by buubleSort!");
+	console.log("Array was sorted by bubbleSort!");
 }
 
 function selectionSort(arr) {
