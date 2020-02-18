@@ -13,7 +13,8 @@ for(let i = 0; i < arr.length; ++i) {
 }
 console.log();
 
-bubbleSort(arr);
+//bubbleSort(arr);
+selectionSort(arr);
 
 console.log("Sorted array:");
 for(let i = 0; i < arr.length; ++ i){
@@ -45,7 +46,7 @@ function bubbleSort(arr) {
 			}
 		}
 	}
-	console.log("Array is sorted!");
+	console.log("Array was sorted by buubleSort!");
 }
 
 function selectionSort(arr) {
@@ -53,10 +54,18 @@ function selectionSort(arr) {
 		console.log("Object must be an array!");
 	}
 
-	
+	for(let start = 0; start < arr.length-1; ++start){
+		let lowest = start;
+		for(let i = start+1; i < arr.length; ++i){
+			if(arr[lowest] > arr[i]) {
+				lowest = i;
+			}
+		}
 
-	for(let i = 0; i < arr.length-1; ++i){
-		
-	} 
+		if(lowest != start){
+			swap(arr, lowest, start);
+		}
+	}
 	
+	console.log("Array was sorted by selectionSort!");
 }
