@@ -33,6 +33,7 @@ function swap(arr, i, j) {
 function bubbleSort(arr) {
 	if(!Array.isArray(arr)) {
 		console.log("Object must be an array!");
+		return;
 	}
 
 	let isSwapped = true;
@@ -52,6 +53,7 @@ function bubbleSort(arr) {
 function selectionSort(arr) {
 	if(!Array.isArray(arr)) {
 		console.log("Object must be an array!");
+		return;
 	}
 
 	for(let start = 0; start < arr.length-1; ++start){
@@ -68,4 +70,12 @@ function selectionSort(arr) {
 	}
 	
 	console.log("Array was sorted by selectionSort!");
+}
+
+function insertionSort(arr) {
+	if(!Array.isArray(arr)) {
+		console.log("Object must be an array!");
+		return;
+	}
+	console.log("Array was sorted by insertionSort!");
 }
