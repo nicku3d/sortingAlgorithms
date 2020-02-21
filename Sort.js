@@ -14,7 +14,8 @@ for(let i = 0; i < arr.length; ++i) {
 console.log();
 
 //bubbleSort(arr);
-selectionSort(arr);
+//selectionSort(arr);
+insertionSort(arr);
 
 console.log("Sorted array:");
 for(let i = 0; i < arr.length; ++ i){
@@ -28,7 +29,6 @@ function swap(arr, i, j) {
 	arr[i] = arr[j];
 	arr[j] = tmp;
 }
-
 
 function bubbleSort(arr) {
 	if(!Array.isArray(arr)) {
@@ -77,5 +77,19 @@ function insertionSort(arr) {
 		console.log("Object must be an array!");
 		return;
 	}
+
+	for(let i = 1; i < arr.length; ++i) {
+
+		let key = arr[i];
+		let j = i-1;
+
+		while(j >= 0 && arr[j] > key) {
+			arr[j+1] = arr[j];
+			j = j-1;
+		}
+
+		arr[j+1] = key;
+	}
+
 	console.log("Array was sorted by insertionSort!");
 }
